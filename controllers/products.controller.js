@@ -2,6 +2,7 @@
 const { response, request } = require('express')
 const Product = require('../models/product')
 
+
 const productsGet = async(req = request, res = response) => {
 
 
@@ -13,7 +14,6 @@ const productsGet = async(req = request, res = response) => {
     
     //Mensaje de respuesta
     res.json({
-        msg: 'get API - controller',
         total_products: total,
         products
     });
@@ -30,7 +30,6 @@ const productsGetById = async(req = request, res = response) => {
 
     //Mensaje de respuesta
     res.json({
-        msg: 'get by id API - controller',
         product
     });
 
@@ -50,7 +49,7 @@ const productsPut = async(req = request, res = response) => {
     
     //Mensaje de respuesta
     res.json({
-        msg: 'Put API - controller',
+        msg: 'Producto actualizado correctamente',
         product
     });
 
@@ -69,7 +68,7 @@ const productsPost = async (req = request, res = response) => {
     
     //Mensaje de respuesta
     res.json({
-        msg: 'Post API - controller',
+        msg: 'Producto guardado correctamente',
         product
     });
 
@@ -86,7 +85,7 @@ const productsDelete = async(req = request, res = response) => {
 
     //Mensaje de respuesta
     res.json({
-        msg: 'Delete API - controller',
+        msg: 'Producto eliminado correctamente',
         product
     });
 

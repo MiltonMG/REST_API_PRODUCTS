@@ -49,6 +49,7 @@ class Server {
 
         //Utilizando el html del directorio publico
         this.app.use(express.static('public'));
+
     
     }
 
@@ -57,6 +58,10 @@ class Server {
         //implementando rutas, con el endpoint dado en el constructor y las indicaciones para el endpoint 
         this.app.use( this.productsPath , require('../routes/products.routes') );
 
+        //Not found
+        this.app.use('/*', function notFound(req, res) {
+            res.status(404).json({ error: `No se encontró la ruta ${req.originalUrl}` });
+          })
     }
 
 }

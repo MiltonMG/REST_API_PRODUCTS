@@ -36,6 +36,5 @@ const existeProducto = async (id) => {
 module.exports = {
     validarCampos,
     existeId,
-    existeProducto
-
+    existeProducto,
 }

@@ -4,7 +4,7 @@ const { Schema, model } = require("mongoose")
 //Esquema sobre como se guardara el producto en la base de datos.
 
 /**
- * NOTA: Todos los campos que en la prueba se indicaban son requeridos
+ * NOTA: Todos los campos que en la prueba se indicaban son requeridos, excepto timestamp
  */
 const ProductSchema = Schema({
     
@@ -28,9 +28,33 @@ const ProductSchema = Schema({
 
     timestamps: {
         type: Date,
-        require: [true, 'El timestamps es obligatorio']
+        default: new Date()
+    },
+    product_category: {
+        type: String,
+        default: 'Campo vacio'
+    },
+    product_image: {
+        type: String,
+        default: 'Campo vacio'
+    },
+    provider: {
+        type: String,
+        default: 'Campo vacio'
     }
-
 });
+
+/*
+sobrescribimos el metodos toJSON para quitar ciertos datos que no queremos enviar al
+realizar peticion al endpoint, esto se envia donde se llama res.json(), esto esta en los controladores de las rutas
+*/
+ProductSchema.methods.toJSON = function() {
+
+    //desestructuramos lo que viene en toObject() [Aca viene la data del endpoint]
+    const { __v, _id, ...product } = this.toObject();
+
+    return product;
+}
+
 
 module.exports = model( 'Product', ProductSchema );

@@ -12,7 +12,7 @@ const { productsGet,
 //middleware personalizado
 const { validarCampos, 
         existeId, 
-        existeProducto } = require('../middlewares/validar-campos');
+        existeProducto} = require('../middlewares/validar-campos');
 
 
 
@@ -46,7 +46,6 @@ router.post('/', [//middlewares para validar que los campos no esten vacios
     check('name', 'El campo name es requerido').not().isEmpty(),
     check('price', 'El campo price es requerido').not().isEmpty(),
     check('description', 'El campo description es requerido').not().isEmpty(),
-    check('timestamps', 'El campo timestamps es requerido').not().isEmpty(),
     validarCampos
 ],productsPost)
 
