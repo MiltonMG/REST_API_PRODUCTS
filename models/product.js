@@ -32,15 +32,15 @@ const ProductSchema = Schema({
     },
     product_category: {
         type: String,
-        default: 'Campo vacio'
+        default: 'Empty field'
     },
     product_image: {
         type: String,
-        default: 'Campo vacio'
+        default: 'Empty field'
     },
     provider: {
         type: String,
-        default: 'Campo vacio'
+        default: 'Empty field'
     }
 });
 

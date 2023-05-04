@@ -49,7 +49,7 @@ const productsPut = async(req = request, res = response) => {
     
     //Mensaje de respuesta
     res.json({
-        msg: 'Producto actualizado correctamente',
+        msg: 'Successful!',
         product
     });
 
@@ -68,7 +68,7 @@ const productsPost = async (req = request, res = response) => {
     
     //Mensaje de respuesta
     res.json({
-        msg: 'Producto guardado correctamente',
+        msg: 'Successful!',
         product
     });
 
@@ -85,7 +85,7 @@ const productsDelete = async(req = request, res = response) => {
 
     //Mensaje de respuesta
     res.json({
-        msg: 'Producto eliminado correctamente',
+        msg: 'Successful!',
         product
     });
 
