@@ -1,6 +1,6 @@
 # Notas sobre el API REST
 
-###El proyecto contiene un API REST basado en clases.
+**El proyecto contiene un API REST basado en clases.**
 
 Llamando correctamente los endpoints podemos realizar acciones como:
 
@@ -10,9 +10,9 @@ Llamando correctamente los endpoints podemos realizar acciones como:
 * Editar            -> PUT:     urlRailway/product/id
 * Eliminar          -> DELETE:  urlRailway/product/id
 
-###Tambien se han controlado cierto tipos errores como podria ser: id repetido, campos vacios, id erroneos, etc.
+**Tambien se han controlado cierto tipos errores como podria ser: id repetido, campos vacios, id erroneos, etc.**
 
-###Tambien el sistema de archivos se ha separado para tener una mejor lectura del codigo, donde:
+**El sistema de archivos se ha separado para tener una mejor lectura del codigo, donde:**
 
 * models: tiene la clase del servidor y el schema de products.
 * routes: donde estan nuestros endpoints finales, middelwares para controlar errores y el llamamiento de las funciones que estos endpoints tienen que realizar.
