@@ -10,6 +10,8 @@ Llamando correctamente los endpoints podemos realizar acciones como:
 * Editar            -> PUT:     urlRailway/product/id
 * Eliminar          -> DELETE:  urlRailway/product/id
 
+## Otras concideraciones
+
 -> **Al momento de crear un nuevo producto todos los campos son obligatorios hasta el id, a excepcion del "timestamps", ya q si no se proporciona este tomara la fecha actual**
 
 -> **Ya que en la prueba tecnia no se habla sobre campos requeridos, ni sobre el tipo de datos para los campos, el id se tiene que proporcionar y este tiene que ser numerico, ademas no se puede repetir, el id siguiente tal y como esta el codigo tiene que ser el 20**
